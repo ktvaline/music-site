@@ -8,6 +8,6 @@ app.get('/', function (req, res) {
   res.sendFile('index.html');
 });
 
-app.listen(3000, function () {
+app.listen(9000, function () {
   console.log('Starting server on port 3000');
 });
