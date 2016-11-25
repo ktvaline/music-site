@@ -8,6 +8,7 @@ body {
     background-color: #F4F4F8;
     padding-bottom:10px;
     padding-top:10px;
+
 }
 
 
@@ -16,16 +17,37 @@ body {
     margin-top:10px;
     background-color: #fcfcfe;
     margin-left:auto;
-
     padding-left: 20px;
-
     padding-right: 20px;
-
     margin-right:auto;
-    
     border-radius: 1px;
-
     padding-bottom:20px;
+
+}
+
+#main-box {
+	width:100%;
+	height:350px;
+	background-color:#eeeeef;
+	-webkit-box-shadow: 10px 31px 83px -4px rgba(0,0,0,0.15);
+
+		background-image:url("edited3.png");
+	background-position: right;
+}
+
+#first-box {
+    display: table-cell;
+    vertical-align: bottom;
+	width:275px;
+	height:300px;
+	background-color:#eeefef;
+		-webkit-box-shadow: 0px 10px 100px 0px rgba(0,0,0,0.1);
+}
+
+#bottom-box {
+background-color:#5F5E69;
+height:55px;
+padding-left:20px;
 
 }
 
@@ -35,52 +57,53 @@ a {
 }
 
 .site-title {
-padding-top:20px;
-margin-left:auto;
-margin-right:auto;
-    max-width: 650px;
+	padding-top:20px;
+	margin-left:auto;
+	margin-right:auto;
+    max-width: 900px;
     font-size: 40px;
-    font-weight:bold;
-    color:#334;
+
+	color:#334;
 }
 
 .title-text {
-    margin-right: 10px;
+
+    color:#557;
+    font-weight: 100;
+    margin:20px;
+    font-size: 38px;
+}
+
+.subtitle-text {
+    color:#557;
+    font-weight: 100;
+    margin:20px;
+    margin-top:5px;
+    font-size:12px;
 
 }
 
-.main-title {
-margin-left:auto;
-margin-right:auto;
-padding-top:20px;
-    max-width: 650px;
-    font-size: 24px;
-    font-weight:bold;
-    color:#334;
-}
-
-.video {
-padding-top:10px;
-    width: 100%;
-    max-width: 100%;
-    height: 314px;
-
+#title {
+font-size:30px;
+padding:20px;
+margin-top:10px;
 
 }
-
+#body-text {
+font-size:14px;
+padding:20px;
+padding-top:0px;
+max-width:550px;
+}
 .social-link {
     font-size: 18px;
-    height: 40px;
+    height: 50px;
+    line-height:40px;
+    margin-right:10px;
+    color:#eee;
+    
 }
 
-.content {
-margin-left:auto;
-margin-right:auto;
-    max-width: 650px;
-    padding-top:15px;
-    color:#889;
-    line-height:20px;
-}
 
 #whitespace {
     line-height: 40px;
