@@ -1,0 +1,24 @@
+{
+  "name": "valine.io",
+  "version": "1.0.0",
+  "description": "Lukas Valine's personal website",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valine/valine.io.git"
+  },
+  "author": "Lukas Valine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valine/valine.io/issues"
+  },
+  "homepage": "https://github.com/valine/valine.io#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "path": "^0.12.7",
+    "sqlite3": "^3.1.7"
+  }
+}
