@@ -5,7 +5,7 @@ html {
 body {
     margin: 0px;
     font-family:sans-serif;
-    background-color: #F4F4F8;
+    background-color: #334;
     padding-bottom:10px;
     padding-top:10px;
 
@@ -15,7 +15,7 @@ body {
 .main-section {
 
     margin-top:10px;
-    background-color: #fcfcfe;
+    background-color: #f2f2f2;
     margin-left:auto;
     padding-left: 20px;
     padding-right: 20px;
@@ -29,10 +29,14 @@ body {
 	width:100%;
 	height:350px;
 	background-color:#eeeeef;
-	-webkit-box-shadow: 10px 31px 83px -4px rgba(0,0,0,0.15);
+	-webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.06);
 
-		background-image:url("edited3.png");
-	background-position: right;
+		background-image:url("images/neckville.jpg");
+	    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position:right;
 }
 
 #first-box {
@@ -40,19 +44,19 @@ body {
     vertical-align: bottom;
 	width:275px;
 	height:300px;
-	background-color:#eeefef;
-		-webkit-box-shadow: 0px 10px 100px 0px rgba(0,0,0,0.1);
+	background-color:#334;
+
 }
 
 #bottom-box {
-background-color:#5F5E69;
+background-color:#f4f4f4;
 height:55px;
 padding-left:20px;
 
 }
 
 a {
-    color: #38f;
+    color: #333;
     text-decoration: none;
 }
 
@@ -60,7 +64,7 @@ a {
 	padding-top:20px;
 	margin-left:auto;
 	margin-right:auto;
-    max-width: 900px;
+    max-width: 1100px;
     font-size: 40px;
 
 	color:#334;
@@ -68,14 +72,14 @@ a {
 
 .title-text {
 
-    color:#557;
+    color:#efefef;
     font-weight: 100;
     margin:20px;
     font-size: 38px;
 }
 
 .subtitle-text {
-    color:#557;
+    color:#efefef;
     font-weight: 100;
     margin:20px;
     margin-top:5px;
@@ -87,20 +91,24 @@ a {
 font-size:30px;
 padding:20px;
 margin-top:10px;
+color:#557;
 
 }
 #body-text {
-font-size:14px;
+font-size:16px;
 padding:20px;
 padding-top:0px;
 max-width:550px;
+line-height:20px;
+color:#557;
+
 }
 .social-link {
     font-size: 18px;
     height: 50px;
     line-height:40px;
     margin-right:10px;
-    color:#eee;
+    color:#445;
     
 }
 
@@ -108,5 +116,13 @@ max-width:550px;
 #whitespace {
     line-height: 40px;
     white-space: nowrap;
+}
+
+#play-button {
+margin-top:-35px;
+margin-right:35px;
+float:right;
+top:-0px;
+-webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.15));
 
 }
