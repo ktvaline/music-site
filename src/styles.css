@@ -140,7 +140,7 @@ font-size:16px;
 padding:20px;
 padding-top:0px;
 max-width:550px;
-line-height:20px;
+line-height:25px;
 color:#335;
 
 }
@@ -194,12 +194,19 @@ float:left;
 
 }
 
+#list-element {
+margin-left: 20px;
+
+}
+
 ul {
 list-style-type: none;
 font-size:20px;
 line-height:50px;
 color:#335;
-margin-left:-20px;
+margin-left:-40px;
 margin-top:20px;
+width:300px;
+
 }
 

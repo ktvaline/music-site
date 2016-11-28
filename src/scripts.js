@@ -11,6 +11,8 @@ var songs = [
 	{"file": "dizzy-fingers.m4a", "name": "Dizzy Fingers"}
 ]
 
+var listElements = [];
+
 function drawList() {
 	
 	var play = document.getElementById("play-button")
@@ -27,41 +29,60 @@ function drawList() {
 	
 		var ul = document.getElementById("ul-music-list")
 		var li = document.createElement("li");
-		li.appendChild(document.createTextNode(songs[i]["name"]));
+		var div = document.createElement("div");
+		
+		div.id = "list-element";
+		
+		listElements.push(li);
+		
+		div.appendChild(document.createTextNode(songs[i]["name"]));
+		li.appendChild(div);
+		
+		if (i == 0) {
+			li.style.backgroundColor = "#ddddde"
+			
+		}
+		
 		li.onclick = function() { 
 			
 			
 			for (i = 0; i < songs.length; i++) {
-				if (songs[i]["name"] == this.innerHTML) {
+					
+				if (songs[i]["name"] == this.textContent) {
+					this.style.backgroundColor = "#ddddde"
 					//alert("audio/" + songs[i]["file"]);
 					audio.src = "audio/" + songs[i]["file"];
 					audio.load();
 					audio.play();
+					
+					audio.onended = function() {
+						audioState = false;
+						document.getElementById("play-button").src = "images/play.png";
+						document.getElementById("now-playing").innerHTML = "Now wasn't that awesome?";
+					};
 					audioState = true;
 					document.getElementById("play-button").src = "images/pause.png";
 					document.getElementById("now-playing").innerHTML = songs[i]["name"];
-					
 					audioIndex = i;
+				} else {
+					listElements[i].style.backgroundColor = null;
 				}
-				
 			}
-
-			
 		};
 		
 		li.onmouseover =  function() { 
-         this.style.opacity="0.7"; 
+
+          this.style.opacity="0.5"; 
 		};
 		
 		li.onmouseout =  function() { 
-         this.style.opacity="1"; 
+
+           this.style.opacity="1"; 
 		};
 		
 		ul.appendChild(li);
 		
 	}
-	
-	
 }
 
 function playMusic() {
@@ -83,7 +104,7 @@ function playMusic() {
 	audio.onended = function() {
 		audioState = false;
 		document.getElementById("play-button").src = "images/play.png";
-		document.getElementById("now-playing").innerHTML = "Press Play";
+		document.getElementById("now-playing").innerHTML = "Now wasn't that awesome?";
 	};
 	
 }
