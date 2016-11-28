@@ -15,13 +15,13 @@ function playMusic() {
 		audio.pause();
 		audioState = false;
 		document.getElementById("play-button").src = "images/play.png";
-		document.getElementById("now-playing").innerHTML = "Press Play...";
+		document.getElementById("now-playing").innerHTML = "Press Play";
 	}	
 	
 	audio.onended = function() {
 		audioState = false;
 		document.getElementById("play-button").src = "images/play.png";
-		document.getElementById("now-playing").innerHTML = "Press Play...";
+		document.getElementById("now-playing").innerHTML = "Press Play";
 	};
 	
 	
