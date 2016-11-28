@@ -11,9 +11,22 @@ var songs = [
 	{"file": "dizzy-fingers.m4a", "name": "Dizzy Fingers"}
 ]
 
+var navElements = [
+	{"name": "Bio", "index":0},
+	{"name": "Dates", "index":1},
+	{"name": "Photos", "index":2},
+	{"name": "Teaching", "index":3}
+]
+
 var listElements = [];
+var navItems = [];
 
 function drawList() {
+	
+	/// Set up music player 
+	///
+	///
+	///
 	
 	var play = document.getElementById("play-button")
 	play.onmouseover =  function() { 
@@ -83,6 +96,91 @@ function drawList() {
 		ul.appendChild(li);
 		
 	}
+	
+	
+	/// Set up navigation and bio stuff
+	///
+	///
+	///
+	
+	for (i = 0; i < navElements.length; i++) {
+		
+		var navBar = document.getElementById("social-links");
+		
+		var span = document.createElement("span");
+		span.className = "social-link";
+		span.appendChild(document.createTextNode(navElements[i]["name"]));
+		
+		if (i == 0) {
+			
+			span.style.backgroundColor = "#ddddde";
+			
+		}
+		
+		navItems.push(span);
+		
+		span.onclick = function() { 
+			
+			for (i = 0; i < navElements.length; i++) {
+				
+				if (navElements[i]["name"] == this.textContent) {
+					this.style.backgroundColor = "#ddddde";
+					
+					var content = document.getElementById("content");
+					
+					if (i == 0) {
+						getText("/bio.html", function(text) {
+							content.innerHTML = text;
+						});
+						
+					} else if (i == 1) {
+						getText("/dates.html", function(text) {
+							content.innerHTML = text;
+						});
+						
+					} else if (i == 2) {
+						getText("/photos.html", function(text) {
+							content.innerHTML = text;
+						});
+						
+						
+					} else if (i == 3) {
+						getText("/teaching.html", function(text) {
+							content.innerHTML = text;
+						});
+						
+					} else {
+						getText("/error.html", function(text) {
+							content.innerHTML = text;
+						});
+					}
+				} else {
+					navItems[i].style.backgroundColor = null;
+				}
+			}		
+		};
+			
+		navBar.appendChild(span);
+		
+	}
+}
+
+function getText(file, fn){
+    // read text from URL location
+    var request = new XMLHttpRequest();
+    request.open('GET', window.location.href + file , true);
+    request.send(null);
+    request.onreadystatechange = function () {
+        if (request.readyState === 4 && request.status === 200) {
+            var type = request.getResponseHeader('Content-Type');
+            
+            
+            if (type.indexOf("text") !== 1) {
+				fn(request.responseText);
+                return request.responseText;
+            }
+        }
+    }
 }
 
 function playMusic() {
