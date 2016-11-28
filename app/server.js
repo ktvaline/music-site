@@ -9,5 +9,5 @@ app.get('/', function (req, res) {
 });
 
 app.listen(9000, function () {
-  console.log('Starting server on port 3000');
+  console.log('Starting server on port 9000');
 });

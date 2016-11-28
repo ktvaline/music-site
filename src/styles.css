@@ -11,6 +11,19 @@ body {
 
 }
 
+img {
+    object-fit: cover;
+    position:top;
+}
+
+#image {
+
+width:150px;
+
+height:220px;"
+
+}
+
 #content {
 margin-left:305px;
 margin-right: 10px;
