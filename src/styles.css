@@ -238,3 +238,29 @@ width:300px;
 
 }
 
+.mail-input {
+width:400px;
+height:40px;
+margin-bottom:10px;
+text-indent: 10px;
+color:#335;
+}
+
+
+.mail-message {
+width:383px;
+height:150px;
+margin-bottom:10px;
+padding:10px;
+color:#335;
+}
+
+
+button {
+width:100px;
+height:40px;
+
+}
+
+
+

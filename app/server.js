@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, '../src')));
 
@@ -13,10 +15,16 @@ app.listen(9000, function () {
 });
 
 
-app.post('/sendmail', function(request, response){
-    
-   console.log(request.firstName)
-   console.log(request.name)
+
+
+
+
+
+app.post('/sendmail', function(request, response, body){
+
+   console.log(JSON.stringify(request.body));
+   
+
 
 /*
 	var nodemailer = require('nodemailer');

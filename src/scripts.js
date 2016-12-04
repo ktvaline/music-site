@@ -206,3 +206,39 @@ function playMusic() {
 	};
 	
 }
+
+function sendMail() {
+	
+	post(window.location.href + "sendmail/", {"name": document.getElementById("name-input").value, "email": document.getElementById("email-input").value, "message": document.getElementById("message-input").value});
+	
+}
+
+function post(path, params) {
+var http = new XMLHttpRequest();
+
+var xhr = new XMLHttpRequest();
+xhr.open("POST", path, true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({
+    value: params
+}));
+
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == XMLHttpRequest.DONE) {
+		
+		var node = document.createElement("span");                
+
+		node.innerHTML = "Message Sent Successfully :)"
+		
+		document.getElementById("success-mail").appendChild(node);
+		
+		document.getElementById("send").remove();
+
+    }
+}
+
+}
+
+
+
+
