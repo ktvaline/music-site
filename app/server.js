@@ -15,11 +15,6 @@ app.listen(9000, function () {
 });
 
 
-
-
-
-
-
 app.post('/sendmail', function(request, response, body){
 
    console.log(JSON.stringify(request.body));
