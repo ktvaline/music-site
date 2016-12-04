@@ -15,7 +15,7 @@ var navElements = [
 	{"name": "Bio", "index":0},
 	{"name": "Dates", "index":1},
 	{"name": "Photos", "index":2},
-	{"name": "Teaching", "index":3}
+	{"name": "Contact", "index":3}
 ]
 
 var listElements = [];
