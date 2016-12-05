@@ -9,8 +9,8 @@ var songs = [
 	{"file": "ground-speed.mp4", "name": "Ground Speed"},
 	{"file": "the-chase-continues.mp4", "name": "The Chase Continues"},
 	{"file": "dizzy-fingers.m4a", "name": "Dizzy Fingers"},
-	{"file": "Hangin-Round-the-Mistleto.mp4", "name": "Hangin Round the Mistletoe"},
-	{"file": "divertimentos.mp4", "name": "Divertimentos"}
+	{"file": "Hangin-Round-the-Mistleto.m4a", "name": "Hangin Round the Mistletoe"},
+	{"file": "divertimentos.m4a", "name": "Divertimentos"}
 	
 ]
 
