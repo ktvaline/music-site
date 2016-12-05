@@ -1,0 +1,17 @@
+<div id="title">
+Contact Me
+</div>
+<div id="body-text">
+	
+
+	 <input type="text" class="mail-input" id="name-input" value="Name" onclick="if(this.value == 'Name'){this.value='';}" onfocusout="if(this.value == ''){this.value='Name';}"><br>
+     <input type="email" class="mail-input" id="email-input" value="Email" onclick="if(this.value == 'Email'){this.value='';}" onfocusout="if(this.value == ''){this.value='Email';}"><br>
+     <textarea class="mail-message" cols="45" id="message-input" rows="5" onclick="if(this.innerHTML == 'Message'){this.innerHTML='';}" onfocusout="if(this.innerHTML == ''){this.innerHTML='Message';}">Message</textarea>
+	<div>
+	<button onclick="sendMail();" id="send"> Send</button>
+	<span id="success-mail"></span>
+
+</div>
+</div>
+			
+

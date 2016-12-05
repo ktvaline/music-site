@@ -8,14 +8,18 @@ var songs = [
 	
 	{"file": "ground-speed.mp4", "name": "Ground Speed"},
 	{"file": "the-chase-continues.mp4", "name": "The Chase Continues"},
-	{"file": "dizzy-fingers.m4a", "name": "Dizzy Fingers"}
+	{"file": "dizzy-fingers.m4a", "name": "Dizzy Fingers"},
+	{"file": "Hangin-Round-the-Mistleto.mp4", "name": "Hangin Round the Mistletoe"},
+	{"file": "divertimentos.mp4", "name": "Divertimentos"}
+	
 ]
 
 var navElements = [
 	{"name": "Bio", "index":0},
 	{"name": "Dates", "index":1},
 	{"name": "Photos", "index":2},
-	{"name": "Contact", "index":3}
+    {"name": "Teaching", "index":3},
+	{"name": "Contact", "index":4}
 ]
 
 var listElements = [];
@@ -143,9 +147,14 @@ function drawList() {
 							content.innerHTML = text;
 						});
 						
+                    } else if (i == 3) {
+                        getText("/teaching.html", function(text) {
+                                content.innerHTML = text;
+                                });
+                        
 						
-					} else if (i == 3) {
-						getText("/teaching.html", function(text) {
+					} else if (i == 4) {
+						getText("/contact.html", function(text) {
 							content.innerHTML = text;
 						});
 						
